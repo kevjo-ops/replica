@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPC Ingeniería</title>
+    <link rel="stylesheet" href="footer.css">
+
+</head>
+
+<body>
+    <!-- para hacer scroll -->
+    <div class="main-content">
+        <div style="height: 100vh; padding: 20px;">
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="description">
+                Somos un grupo empresarial dedicados a la fabricación de estructuras metálicas, servicios de soldadura especializada y outsourcing de procesos y servicios en los sectores de minería, industria, energía, petróleo y retail
+            </div>
+            
+            <div class="areas">
+                <h3>Areas</h3>
+                <a href="#ingenieria" class="button-link">INGENIERIA</a>
+                <a href="#servicios" class="button-link">SERVICIOS</a>
+            </div>
+            
+            <div class="direccion">
+                <h3>Dirección</h3>
+                <p><strong>OFICINA:</strong> Urb. Corazón de María C-9 — Arequipa</p>
+                <p><strong>TALLER:</strong> Panamericana Sur S/N - A media cuadra de By-pass cruce KM 48 — La Joya - Arequipa</p>
+                <p><strong>DIRECCIÓN:</strong> Av. Argentina E8-A - APTASA - Parque Industrial Río Seco - Cerro Colorado - Arequipa</p>
+                <p>📞 996 050 489</p>
+                <p>✉️ ventas@epc.net.pe</p>
+            </div>
+        </div>
+        
+        <div class="footer-line"></div>
+        <div class="copyright">
+            © Copyright 2025 / Hecho por Alma Quinta y Six Lab
+        </div>
+
+        <div class="footer-bottom">
+            <img src="epc verde.png" alt="Logo EPC" class="footer-logo">
+        </div>
+        
+    </footer>
+
+    <a href="#" class="scroll-top" aria-label="Volver arriba"></a>
+
+    <script>
+        
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.querySelector('.scroll-top').style.display = "flex";
+            } else {
+                document.querySelector('.scroll-top').style.display = "none";
+            }
+        };
+
+        // Scroll suave al hacer clic
+        document.querySelector('.scroll-top').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
+
