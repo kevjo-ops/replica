@@ -1,0 +1,58 @@
+.objetivos {
+    background-color: #0A0F2C; /* Color azul marino oscuro */
+    color: white;
+    padding: 20px 20px;
+    text-align: center;
+    margin: 0;
+    font-family: 'Segoe UI';
+}
+
+.objetivos h2 {
+    font-size: 55px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.objetivos-intro {
+    max-width: 1100px;
+    margin: 0 auto 0px;
+    line-height: 1.6;
+    font-size: 23px;
+}
+
+.objetivos-lista {
+    list-style: none;
+    padding: 0;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.objetivos-lista li {
+    max-width: 1100px;
+    margin-bottom: 15px;
+    line-height: 1.25;
+    font-size: 23px;
+}
+
+/* Asegurar que no haya espacios entre secciones */
+.objetivos + .politica-integrada {
+    margin-top: 0;
+}
+
+/* Ajustes para móvil */
+@media (max-width: 768px) {
+    .objetivos {
+        padding: 30px 15px;
+    }
+    
+    .objetivos h2 {
+        font-size: 24px;
+    }
+    
+    .objetivos-intro,
+    .objetivos-lista li {
+        font-size: 15px;
+    }
+}

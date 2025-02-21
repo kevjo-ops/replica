@@ -1,0 +1,151 @@
+.valores-section {
+    background-color: #f5f5f5;
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+    margin: 0;
+}
+
+.valores-title {
+    position: relative;
+    font-size: 36px;
+    color: #0A0F2C;
+    margin-bottom: 80px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.valores-background {
+    position: absolute;
+    font-size: 120px;
+    color: rgba(0, 0, 0, 0.05);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    white-space: nowrap;
+    z-index: 1;
+    font-weight: 300;
+}
+
+.valores {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 40px;
+}
+
+.valores::after {
+    content: '';
+    position: absolute;
+    width: calc(100% - 80px);
+    height: 2px;
+    background: repeating-linear-gradient(
+        to right,
+        transparent,
+        transparent 8px,
+        #00ff9d 8px,
+        #00ff9d 16px
+    );
+    bottom: 80px;
+    left: 40px;
+    z-index: 1;
+}
+
+.valor-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+    width: 120px;
+}
+
+.valor-item img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 60px;
+    filter: invert(72%) sepia(40%) saturate(463%) hue-rotate(101deg) brightness(95%) contrast(98%);
+}
+
+.valor-item p {
+    margin: 0;
+    font-size: 16px;
+    color: #0A0F2C;
+    font-weight: bold;
+}
+
+/* Ajustes para la línea punteada */
+.valores::before {
+    content: '';
+    position: absolute;
+    width: calc(100% - 120px);
+    height: 10px;
+    bottom: 76px;
+    left: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.valores::before::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #0A0F2C;
+    border-radius: 50%;
+}
+
+@media (max-width: 1200px) {
+    .valores {
+        padding: 0 20px;
+    }
+    
+    .valor-item {
+        width: 100px;
+    }
+    
+    .valor-item img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .valores {
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: center;
+    }
+
+    .valores::after {
+        display: none;
+    }
+
+    .valor-item {
+        width: calc(33.33% - 40px);
+    }
+
+    .valor-item img {
+        margin-bottom: 20px;
+    }
+
+    .valores-background {
+        font-size: 80px;
+    }
+
+    .valores-title {
+        font-size: 28px;
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .valor-item {
+        width: calc(50% - 20px);
+    }
+}
+
+
+
+
