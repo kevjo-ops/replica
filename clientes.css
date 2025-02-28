@@ -1,0 +1,42 @@
+#clientes{
+    background: #02062c;
+    width: 100%;
+    padding: 30px 400px;
+}
+
+.clientes-section {
+    display: flex;
+    width: 1024px;
+    margin: auto;
+    padding: 50px;
+    align-items: center;
+}
+
+.clientes-texto {
+    width: 60%;
+    font-family: 'Segoe UI';
+    font-weight: bold;
+}
+
+.clientes-texto h2 {
+    color: #00cf75;
+    font-size: 30px;
+}
+
+.clientes-texto h1 {
+    color: white;
+    font-size: 40px;
+}
+
+.clientes-logos {
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    gap: 30px;
+}
+
+.clientes-logos img {
+    width: 100px;
+    background: white;
+}

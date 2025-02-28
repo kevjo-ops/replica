@@ -1,0 +1,102 @@
+.politica-integrada {
+    background-color: #E5E5E5;
+    padding: 20px 20px;
+    text-align: center;
+    margin-bottom: 0;
+    font-family: 'Segoe UI';
+}
+
+.politica-integrada h2 {
+    font-size: 55px;
+    font-weight: 790;
+    color: #000;
+    margin-bottom: 20px;    
+}
+
+.politica-integrada p {
+    font-size: 25px;
+    max-width: 1100px;
+    text-align: left;
+    margin: 0 auto 15px auto;
+    line-height: 1.6;
+}
+
+.politica-integrada ul {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: left;
+    list-style: none;
+    padding: 0;
+}
+
+.politica-integrada ul li {
+    margin-bottom: 15px;
+    font-size: 25px;
+    position: relative;
+    padding-left: 20px;
+    
+}
+
+.politica-integrada ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #002557;
+    font-size: 25px;
+}
+
+.certificaciones {
+    display: flex;
+    justify-content: center;
+   /* align-items: center; /* Centra los elementos verticalmente */
+    gap: 40px;
+    margin-top: 150px;
+}
+
+.certificaciones div {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+}
+
+.certificaciones div p {
+    text-align: center; 
+    margin-bottom: 10px; 
+}
+
+.certificaciones div img {
+    display: block;
+    margin: 0 auto; 
+    align-self: center;
+}
+
+.certificaciones .iso {
+    max-width: 200px; 
+    height: auto;
+}
+
+.certificaciones .sgs {
+    max-width: 400px; 
+    height: auto;
+}
+
+.certificaciones .achilles {
+    max-width: 400px; 
+    height: auto;
+    display: block;
+    margin: 20px auto 0 auto;
+}
+
+.certificaciones div:last-child img {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+@media (max-width: 768px) {
+    .certificaciones {
+        flex-direction: column;
+        gap: 20px;
+        
+    }
+}
