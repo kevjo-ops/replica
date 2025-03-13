@@ -1,46 +1,98 @@
-body{
-    background: #f5f5f5;;
-}
-
-#clientes{
-    background: #02062c;
-    width: 100%;
-    padding: 30px 400px;
-}
-
-.clientes-section {
+#clientes-destacados {
+    padding: 60px 0;
+    background-color: #06061F; /* Fondo azul oscuro */
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .section-title {
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #00FF9D; /* Verde */
+    font-size: 28px;
+    text-align: center;
+  }
+  
+  .section-description {
+    margin-bottom: 40px;
+    font-size: 18px;
+    color: #ccc;
+    text-align: center;
+  }
+  
+  /* Estilos para los items del carrusel */
+  .cliente-item {
+    height: 140px;
+    margin: 0 10px;
+    background-color: #fff;
+    border-radius: 8px;
     display: flex;
-    width: 1024px;
-    margin: auto;
-    padding: 50px;
     align-items: center;
-}
-
-.clientes-texto {
-    width: 60%;
-    font-family: 'Segoe UI';
-    font-weight: bold;
-}
-
-.clientes-texto h2 {
-    color: #00cf75;
-    font-size: 30px;
-}
-
-.clientes-texto h1 {
-    color: white;
-    font-size: 40px;
-}
-
-.clientes-logos {
-    width: 50%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-items: center;
-    gap: 30px;
-}
-
-.clientes-logos img {
-    width: 100px;
-    background: white;
-}
+    justify-content: center;
+    padding: 15px;
+  }
+  
+  .cliente-item img {
+    max-width: 100%;
+    max-height: 110px;
+    object-fit: contain;
+  }
+  
+  /* Contenedor de carrusel para posicionamiento adecuado */
+  .carousel-wrapper {
+    position: relative;
+    padding: 0 50px; /* Espacio para las flechas a los lados */
+  }
+  
+  /* Estilos para los controles del carrusel - Botones verdes circulares */
+  .owl-nav button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: #00CC75 !important; /* Verde */
+    border-radius: 50% !important;
+    color: white !important;
+    font-size: 24px !important;
+    line-height: 40px !important;
+    text-align: center;
+    outline: none;
+    z-index: 10;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Posicionamiento correcto de las flechas */
+  .owl-nav button.owl-prev {
+    left: 0;
+  }
+  
+  .owl-nav button.owl-next {
+    right: 0;
+  }
+  
+  /* Quitar puntos de navegación */
+  .owl-dots {
+    display: none;
+  }
+  
+  /* Dirección de los carruseles */
+  .clientes-carousel-top {
+    direction: ltr; /* Izquierda a derecha */
+  }
+  
+  .clientes-carousel-bottom {
+    direction: rtl; /* Derecha a izquierda */
+    margin-top: 50px;
+  }
+  
+  /* Centrar contenido */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+  }
