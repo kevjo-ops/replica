@@ -1,6 +1,6 @@
 .politica-integrada {
-    background-color: #E5E5E5;
-    padding: 20px 20px;
+    background-color: rgb(232,228,228);
+    padding: 46px 46px;
     text-align: center;
     margin-bottom: 0;
     font-family: 'Segoe UI';
@@ -34,7 +34,6 @@
     font-size: 25px;
     position: relative;
     padding-left: 20px;
-    
 }
 
 .politica-integrada ul li::before {
@@ -45,58 +44,221 @@
     font-size: 25px;
 }
 
-.certificaciones {
-    display: flex;
-    justify-content: center;
-   /* align-items: center; /* Centra los elementos verticalmente */
-    gap: 40px;
-    margin-top: 150px;
+/* Estilos para el carrusel de certificaciones */
+.certificaciones-carousel-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 100px auto 0;
+    padding-bottom: 48px;
+    position: relative;
 }
 
-.certificaciones div {
+.certificacion-item {
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
     text-align: center;
+    padding: 10px;
 }
 
-.certificaciones div p {
-    text-align: center; 
-    margin-bottom: 10px; 
+.certificacion-item p {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    height: 50px; /* Altura fija para el título */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.certificaciones div img {
-    display: block;
-    margin: 0 auto; 
-    align-self: center;
+.certificacion-item img {
+    height: 140px;
+    width: auto;
+    object-fit: contain;
 }
 
-.certificaciones .iso {
-    max-width: 200px; 
-    height: auto;
+.certificacion-item .iso {
+    max-width: 180px;
 }
 
-.certificaciones .sgs {
-    max-width: 400px; 
-    height: auto;
+.certificacion-item .sgs {
+    max-width: 300px;
 }
 
-.certificaciones .achilles {
-    max-width: 400px; 
-    height: auto;
-    display: block;
-    margin: 20px auto 0 auto;
+.certificacion-item .achilles {
+    max-width: 300px;
 }
 
-.certificaciones div:last-child img {
-    margin-top: auto;
-    margin-bottom: auto;
+/* Estilos para los botones de navegación del carrusel */
+#certificaciones-carousel .owl-nav {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: 0;
 }
 
-@media (max-width: 768px) {
-    .certificaciones {
-        flex-direction: column;
-        gap: 20px;
-        
+#certificaciones-carousel .owl-nav button.owl-prev,
+#certificaciones-carousel .owl-nav button.owl-next {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: white !important;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+#certificaciones-carousel .owl-nav button.owl-prev {
+    left: -20px;
+}
+
+#certificaciones-carousel .owl-nav button.owl-next {
+    right: -20px;
+}
+
+#certificaciones-carousel .nav-btn {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-top: 3px solid #4CAF50;
+    border-right: 3px solid #4CAF50;
+}
+
+#certificaciones-carousel .prev-slide {
+    transform: rotate(-135deg);
+}
+
+#certificaciones-carousel .next-slide {
+    transform: rotate(45deg);
+}
+
+/* Estilos para los puntos indicadores */
+#certificaciones-carousel .owl-dots {
+    margin-top: 20px;
+}
+
+#certificaciones-carousel .owl-dot span {
+    background-color: #cccccc;
+}
+
+#certificaciones-carousel .owl-dot.active span {
+    background-color: #002557;
+}
+
+/* Estilos para flechas de carrusel personalizadas */
+.custom-nav {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    z-index: 10;
+}
+
+.custom-prev, .custom-next {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #00cf75;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-prev {
+    left: -20px;
+}
+
+.custom-next {
+    right: -20px;
+}
+
+.custom-nav button .nav-arrow {
+    width: 12px;
+    height: 12px;
+    border-top: 3px solid rgb(232,228,228);
+    border-right: 3px solid rgb(232,228,228);
+    display: inline-block;
+}
+
+.custom-prev .nav-arrow {
+    transform: rotate(-135deg);
+    margin-right: -4px;
+}
+
+.custom-next .nav-arrow {
+    transform: rotate(45deg);
+    margin-left: -4px;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 991px) {
+    .certificaciones-carousel-container {
+        width: 90%;
+        max-width: 500px;
+        margin: 60px auto 0;
+    }
+    
+    #certificaciones-carousel .owl-nav button.owl-prev,
+    .custom-prev {
+        left: -25px;
+    }
+    
+    #certificaciones-carousel .owl-nav button.owl-next,
+    .custom-next {
+        right: -25px;
+    }
+    
+    .certificacion-item img {
+        height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .politica-integrada h2 {
+        font-size: 40px;
+    }
+    
+    .politica-integrada p,
+    .politica-integrada ul li {
+        font-size: 20px;
+    }
+    
+    .certificacion-item p {
+        font-size: 18px;
+    }
+    
+    .certificacion-item img {
+        height: 150px;
+    }
+    
+    #certificaciones-carousel .owl-nav button.owl-prev,
+    #certificaciones-carousel .owl-nav button.owl-next,
+    .custom-prev,
+    .custom-next {
+        width: 30px;
+        height: 30px;
+    }
+    
+    #certificaciones-carousel .owl-nav button.owl-prev,
+    .custom-prev {
+        left: -15px;
+    }
+    
+    #certificaciones-carousel .owl-nav button.owl-next,
+    .custom-next {
+        right: -15px;
+    }
+    
+    .politica-integrada {
+        padding: 30px 20px;
     }
 }
