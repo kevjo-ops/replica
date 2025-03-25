@@ -4,34 +4,35 @@
     box-sizing: border-box;
 }
 
-#proyectos{
+#proyectos-destacados {
     font-family: 'Poppins', sans-serif;
-    background-color: #f5f5f5;
+    background-color: rgb(232,228,228);
+    position: relative;
 }
 
-.titulo-section {
+.titulo-proyectos-section {
     position: relative;
     text-align: center;
-    padding: 60px 0 30px;
+    padding: 80px 0 10px;
     margin-bottom: 20px;
 }
 
-.titulo-outline {
+.titulo-proyectos-outline {
     font-size: 150px;
     font-weight: 700;
     color: transparent;
     -webkit-text-stroke: 2px #0a0a26;
     opacity: 0.2;
     position: absolute;
-    top: 20%;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -55%);
     white-space: nowrap;
     z-index: 0;
     user-select: none;
 }
 
-.titulo-main {
+.titulo-proyectos-main {
     font-size: 50px;
     font-weight: 700;
     color: #0a0a26;
@@ -41,7 +42,7 @@
     margin: 0 auto;
 }
 
-.titulo-accent {
+.titulo-proyectos-accent {
     display: block;
     width: 60px;
     height: 6px;
@@ -50,13 +51,14 @@
     border-radius: 3px;
 }
 
-.container {
+.container-proyectos {
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 20px;
+    position: relative;
 }
 
-.proyecto-item {
+.destacado-item {
     background-color: #fff;
     border-radius: 8px;
     overflow: hidden;
@@ -65,32 +67,32 @@
     margin: 10px;
 }
 
-.proyecto-item:hover {
+.destacado-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-.proyecto-img {
+.destacado-img {
     height: 200px;
     overflow: hidden;
 }
 
-.proyecto-img img {
+.destacado-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s;
 }
 
-.proyecto-item:hover .proyecto-img img {
+.destacado-item:hover .destacado-img img {
     transform: scale(1.05);
 }
 
-.proyecto-info {
+.destacado-info {
     padding: 20px;
 }
 
-.proyecto-info h3 {
+.destacado-info h3 {
     font-size: 16px;
     margin-bottom: 10px;
     color: #333;
@@ -99,7 +101,7 @@
     overflow: hidden;
 }
 
-.proyecto-info p {
+.destacado-info p {
     color: #666;
     font-size: 14px;
     line-height: 1.4;
@@ -108,10 +110,10 @@
     overflow: hidden;
 }
 
-.saber-mas {
+.ver-mas-btn {
     display: inline-block;
     padding: 8px 15px;
-    background-color: #00b300;
+    background-color: #4CAF50;
     color: white;
     text-decoration: none;
     font-size: 13px;
@@ -120,94 +122,106 @@
     font-weight: bold;
 }
 
-.saber-mas:hover {
-    background-color: #008a00;
+.ver-mas-btn:hover {
+    background-color: #4CAF50;
 }
 
-/* Controles del carrusel */
-.owl-nav button {
+/* Custom navigation buttons */
+.custom-nav-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 40px;
-    height: 40px;
-    border-radius: 50% !important;
-    background-color: rgba(255, 255, 255, 0.8) !important;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    display: flex !important;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #00c075;
+    color: white;
+    border: none;
+    font-size: 22px;
+    display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
 }
 
-.owl-nav button:hover {
-    background-color: white !important;
+.custom-nav-btn:hover {
+    background-color: #00a865;
 }
 
-.owl-nav button span {
-    font-size: 24px;
-    color: #333;
+.prev-btn {
+    left: -22px;
 }
 
-.owl-prev {
-    left: -20px;
+.next-btn {
+    right: -22px;
 }
 
-.owl-next {
-    right: -20px;
-}
-
-.owl-dots {
-    margin-top: 20px !important;
+/* Estilo para los dots (puntos de navegación) */
+#destacados-carousel .owl-dots {
+    display: block !important;
     text-align: center;
+    padding-top: 20px;
+    margin-bottom: 10px;
 }
 
-.owl-dot span {
+#destacados-carousel .owl-dot {
+    display: inline-block;
+    margin: 0 4px;
+}
+
+#destacados-carousel .owl-dot span {
     width: 10px !important;
     height: 10px !important;
-    margin: 5px !important;
-    background: #d6d6d6 !important;
+    background-color: #ccc !important;
     border-radius: 50% !important;
+    display: block;
 }
 
-.owl-dot.active span, 
-.owl-dot:hover span {
-    background: #00b300 !important;
+#destacados-carousel .owl-dot.active span {
+    background-color: #4CAF50 !important; /* Color verde para el punto activo */
 }
 
 /* Media queries */
 @media (max-width: 768px) {
-    .titulo-outline {
+    .titulo-proyectos-outline {
         font-size: 100px;
     }
     
-    .titulo-main {
+    .titulo-proyectos-main {
         font-size: 40px;
     }
     
-    .owl-nav {
-        display: none;
+    .container-proyectos {
+        padding: 20px 15px;
     }
     
-    .container {
-        padding: 20px 15px;
+    .prev-btn {
+        left: 10px;
+    }
+    
+    .next-btn {
+        right: 10px;
     }
 }
 
 @media (max-width: 480px) {
-    .titulo-outline {
+    .titulo-proyectos-outline {
         font-size: 80px;
     }
     
-    .titulo-main {
+    .titulo-proyectos-main {
         font-size: 32px;
     }
     
-    .titulo-accent {
+    .titulo-proyectos-accent {
         width: 50px;
         height: 5px;
     }
     
-    .proyecto-img {
+    .destacado-img {
         height: 180px;
     }
 }
