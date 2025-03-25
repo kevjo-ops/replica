@@ -1,28 +1,28 @@
 #clientes-destacados {
     padding: 60px 0;
-    background-color: #06061F; /* Fondo azul oscuro */
+    background-color: #06061F; 
     color: #fff;
     position: relative;
     overflow: hidden;
+    font-family: 'Segoe UI';
   }
   
   .section-title {
     margin-bottom: 15px;
     font-weight: 700;
     text-transform: uppercase;
-    color: #00FF9D; /* Verde */
-    font-size: 28px;
+    color: #00FF9D; 
+    font-size: 50px;
     text-align: center;
   }
   
   .section-description {
     margin-bottom: 40px;
-    font-size: 18px;
+    font-size: 24px;
     color: #ccc;
     text-align: center;
   }
-  
-  /* Estilos para los items del carrusel */
+
   .cliente-item {
     height: 140px;
     margin: 0 10px;
@@ -40,57 +40,28 @@
     object-fit: contain;
   }
   
-  /* Contenedor de carrusel para posicionamiento adecuado */
   .carousel-wrapper {
     position: relative;
-    padding: 0 50px; /* Espacio para las flechas a los lados */
+    padding: 0; 
   }
-  
-  /* Estilos para los controles del carrusel - Botones verdes circulares */
-  .owl-nav button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 40px;
-    height: 40px;
-    background-color: #00CC75 !important; /* Verde */
-    border-radius: 50% !important;
-    color: white !important;
-    font-size: 24px !important;
-    line-height: 40px !important;
-    text-align: center;
-    outline: none;
-    z-index: 10;
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
+
+  .owl-nav {
+    display: none !important;
   }
-  
-  /* Posicionamiento correcto de las flechas */
-  .owl-nav button.owl-prev {
-    left: 0;
-  }
-  
-  .owl-nav button.owl-next {
-    right: 0;
-  }
-  
-  /* Quitar puntos de navegación */
+
   .owl-dots {
     display: none;
   }
-  
-  /* Dirección de los carruseles */
+
   .clientes-carousel-top {
-    direction: ltr; /* Izquierda a derecha */
+    direction: ltr; 
   }
   
   .clientes-carousel-bottom {
-    direction: rtl; /* Derecha a izquierda */
+    direction: rtl; 
     margin-top: 50px;
   }
-  
-  /* Centrar contenido */
+
   .container {
     max-width: 1200px;
     margin: 0 auto;
