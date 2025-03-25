@@ -1,31 +1,36 @@
 $(document).ready(function(){
-    $("#proyectos-carousel").owlCarousel({
+    var owlCarousel = $("#destacados-carousel").owlCarousel({
         loop: true,
         margin: 20,
-        nav: true,
+        nav: false,
         dots: true,
         autoplay: true,
         autoplayTimeout: 5000,
         autoplayHoverPause: true,
-        navText: ["<span>&lt;</span>", "<span>&gt;</span>"],
         responsive: {
             0: {
-                items: 1,
-                nav: false
+                items: 1
             },
             600: {
-                items: 2,
-                nav: false
+                items: 2
             },
             900: {
                 items: 3
             }
         }
     });
+    
+    $("#prev-destacados").click(function() {
+        owlCarousel.trigger('prev.owl.carousel');
+    });
+    
+    $("#next-destacados").click(function() {
+        owlCarousel.trigger('next.owl.carousel');
+    });
 
-    $(".saber-mas").on("click", function(e) {
+    $(".ver-mas-btn").on("click", function(e) {
         e.preventDefault();
-        const proyectoTitulo = $(this).closest('.proyecto-item').find('h3').text();
+        const proyectoTitulo = $(this).closest('.destacado-item').find('h3').text();
         alert("Detalles del proyecto: " + proyectoTitulo + " (Implementación pendiente)");
     });
 });
