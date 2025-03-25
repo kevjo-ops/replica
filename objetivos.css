@@ -1,24 +1,29 @@
 .objetivos {
-    background-color: #0A0F2C; /* Color azul marino oscuro */
-    color: white;
-    padding: 20px 20px;
+    background-color: rgb(2, 6, 44);
+    color: rgb(255, 255, 255);;
+    padding: 46px 46px;
     text-align: center;
     margin: 0;
     font-family: 'Segoe UI';
 }
 
 .objetivos h2 {
-    font-size: 55px;
-    font-weight: bold;
-    margin-bottom: 30px;
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 16px;
     text-transform: uppercase;
+    margin-block-end: 16px;
+    height: 106px;
+    text-size-adjust: 100%;
 }
 
 .objetivos-intro {
     max-width: 1100px;
-    margin: 0 auto 0px;
+    margin: 0 auto 10px;
+    text-align: left;
     line-height: 1.6;
-    font-size: 23px;
+    font-size: 24px;
+    padding-top: 35px;
 }
 
 .objetivos-lista {
@@ -32,16 +37,15 @@
 .objetivos-lista li {
     max-width: 1100px;
     margin-bottom: 15px;
+    text-align: left;
     line-height: 1.25;
-    font-size: 23px;
+    font-size: 24px;
 }
 
-/* Asegurar que no haya espacios entre secciones */
 .objetivos + .politica-integrada {
     margin-top: 0;
 }
 
-/* Ajustes para móvil */
 @media (max-width: 768px) {
     .objetivos {
         padding: 30px 15px;
