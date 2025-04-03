@@ -1,0 +1,80 @@
+/* Estilos para el sticky header */
+.sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #00003a; /* Color azul oscuro del header */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Limita el ancho y permite centrado */
+    width: 100%;
+    margin: 0 auto; /* Centra el contenedor */
+    padding: 10px 20px;
+}
+
+.logo {
+    background-color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.epc-header {
+    height: auto;
+    max-height: 55px;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav li {
+    margin-left: 25px; /* Espacio entre elementos del menú */
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #1aa3dd; /* Color celeste para hover */
+}
+
+/* Para que el contenido no quede debajo del header */
+body {
+    padding-top: 75px; /* Ajustado para el tamaño del header */
+    margin: 0;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+    
+    .logo {
+        margin-bottom: 10px;
+    }
+    
+    .main-nav li {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
