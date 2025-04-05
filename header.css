@@ -1,35 +1,43 @@
-/* Estilos para el sticky header */
 .sticky-header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #00003a; /* Color azul oscuro del header */
+    background-color: #00003a; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     z-index: 1000;
+    height: 95px;
 }
 
 .header-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    max-width: 1200px; /* Limita el ancho y permite centrado */
+    align-items: stretch;
+    max-width: 1300px;
     width: 100%;
-    margin: 0 auto; /* Centra el contenedor */
-    padding: 10px 20px;
+    margin: 0 auto; 
+    padding: 0 0 0 0;
+    height: 100%;
 }
 
 .logo {
     background-color: white;
-    padding: 5px 15px;
-    border-radius: 5px;
+    padding: 10px 5px;
     display: flex;
     align-items: center;
+    height: 100%;
 }
 
 .epc-header {
     height: auto;
-    max-height: 55px;
+    max-height: 70px;
+    padding: 10px 20px;
+}
+
+.main-nav{
+    padding-right:  20px;
+    display: flex;
+    align-items: center;
 }
 
 .main-nav ul {
@@ -37,10 +45,11 @@
     list-style: none;
     margin: 0;
     padding: 0;
+    justify-content: flex-end;
 }
 
 .main-nav li {
-    margin-left: 25px; /* Espacio entre elementos del menú */
+    margin-left: 25px;
 }
 
 .main-nav a {
@@ -53,16 +62,14 @@
 }
 
 .main-nav a:hover {
-    color: #1aa3dd; /* Color celeste para hover */
+    color: #1aa3dd; 
 }
 
-/* Para que el contenido no quede debajo del header */
 body {
-    padding-top: 75px; /* Ajustado para el tamaño del header */
+    padding-top: 75px; 
     margin: 0;
 }
 
-/* Media query para pantallas pequeñas */
 @media (max-width: 768px) {
     .header-container {
         flex-direction: column;
