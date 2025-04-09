@@ -1,6 +1,5 @@
 $(document).ready(function(){
-    // Inicializar carrusel
-    var owl = $('.hero-main-carousel').owlCarousel({
+    $('.hero-main-carousel').owlCarousel({
         items: 1,
         loop: true,
         autoplay: true,
@@ -9,28 +8,67 @@ $(document).ready(function(){
         nav: true,
         navText: ['<', '>'],
         dots: false,
-        smartSpeed: 1000,
-        animateOut: 'fadeOut'
+        smartSpeed: 800,
+        animateOut: 'fadeOut',
+        responsive: {
+            0: {
+                autoplay: true,
+                autoplayTimeout: 5000,
+                smartSpeed: 600
+            },
+            768: {
+                autoplay: true,
+                autoplayTimeout: 6000,
+                smartSpeed: 700
+            },
+            992: {
+                autoplay: true,
+                autoplayTimeout: 6000,
+                smartSpeed: 800
+            }
+        },
+        onInitialized: carouselInitialized
     });
-    
-    // Asegurarse de que los overlays sean visibles inicialmente
-    $('.overlay-box').css({
-        'opacity': 1,
-        'transform': 'translateX(0)'
-    });
-    
-    // Agregar efecto de transición después del cambio de diapositiva
-    owl.on('changed.owl.carousel', function(event) {
+
+    function carouselInitialized(event) {
+        $('.owl-item.active .overlay-box').css({
+            'opacity': 1,
+            'transform': 'translateX(0)'
+        });
+    }
+
+    $('.hero-main-carousel').on('translate.owl.carousel', function(event) {
         $('.overlay-box').css({
             'opacity': 0,
-            'transform': 'translateX(-50px)'
+            'transform': 'translateX(-30px)'
         });
-        
+    });
+
+    $('.hero-main-carousel').on('translated.owl.carousel', function(event) {
         setTimeout(function() {
-            $('.active .overlay-box').css({
+            $('.owl-item.active .overlay-box').css({
                 'opacity': 1,
                 'transform': 'translateX(0)'
             });
-        }, 300);
+        }, 100);
+    });
+
+    function adjustCarouselHeight() {
+        if ($(window).width() <= 576) {
+            var contentHeight = $('.overlay-box').outerHeight() + 100; 
+            var minHeight = 400;
+            $('.hero-carousel, .carousel-item').css('height', Math.max(contentHeight, minHeight) + 'px');
+        } else if ($(window).width() <= 768) {
+            $('.hero-carousel, .carousel-item').css('height', '80vh');
+        } else if ($(window).width() <= 1200) {
+            $('.hero-carousel, .carousel-item').css('height', '80vh');
+        } else {
+            $('.hero-carousel, .carousel-item').css('height', '100vh');
+        }
+    }
+
+    adjustCarouselHeight();
+    $(window).resize(function() {
+        adjustCarouselHeight();
     });
 });
