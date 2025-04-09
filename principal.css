@@ -3,14 +3,16 @@
     width: 100%;
     height: 100vh;
     overflow: hidden;
+    max-height: 800px;
+    min-height: 500px;
 }
 
 .carousel-item {
     position: relative;
-    height: 100vh;
+    height: 100%;
 }
 
-.carousel-item img {
+.carousel-item img.slide-bg {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -27,135 +29,112 @@
     height: 100%;
     display: flex;
     align-items: center;
-    z-index: 5;
+    z-index: 10;
 }
 
-/* Overlay box para el texto */
 .overlay-box {
-    background-color: rgba(0, 42, 72, 0.8);
+    background-color: rgba(0, 78, 121, 0.75);
     color: white;
-    padding: 40px;
-    max-width: 600px;
-    margin-left: 10%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: all 0.5s ease;
+    padding: 50px 60px 50px 50px;
+    max-width: 650px;
+    margin-left: 8%;
     position: relative;
-    z-index: 1;
+    border-left: 6px solid #00e676;
+    line-height: 1.6;
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-/* Contenedor para la imagen pequeña */
-.thumbnail-container {
+.overlay-box h2 {
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.overlay-box h1 {
+    font-size: 42px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+.text-content p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.btn-contacto {
+    display: inline-block;
+    background-color: #00e676;
+    color: white;
+    text-decoration: none;
+    padding: 14px 40px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: background 0.3s;
+}
+
+.btn-contacto:hover {
+    background-color: #00c853;
+}
+
+.secondary-image {
     position: absolute;
-    top: 70px;
     right: -100px;
-    width: 180px;
-    height: 120px;
-    z-index: 2;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    overflow: hidden;
-    border: 2px solid #fff;
+    bottom: -100px;
+    width: 240px;
+    height: 240px;
+    border: 8px solid white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    z-index: 15;
 }
 
-.thumbnail-container img {
+.secondary-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.overlay-box h2 {
-    color: #00e2c8;
-    font-size: 18px;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-}
-
-.overlay-box h1 {
-    font-size: 40px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-}
-
-.overlay-box p {
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 25px;
-    max-width: 90%;
-}
-
-.btn-contacto {
-    display: inline-block;
-    background-color: #00e2c8;
-    color: #fff;
-    text-decoration: none;
-    padding: 12px 30px;
-    border-radius: 0;
-    font-size: 16px;
-    text-transform: uppercase;
-    transition: background-color 0.3s;
-}
-
-.btn-contacto:hover {
-    background-color: #00c5ae;
-}
-
 .owl-nav {
     position: absolute;
-    bottom: 30px;
-    left: 10%;
+    bottom: 40px;
+    left: 8%;
     display: flex;
-    gap: 10px;
+    gap: 15px;
+    z-index: 20;
 }
 
-.owl-nav button.owl-prev,
-.owl-nav button.owl-next {
-    background-color: #00e2c8 !important;
+.owl-nav button {
+    background-color: #00e676 !important;
     color: white !important;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 0 !important;
-    display: flex !important;
+    font-size: 28px !important;
+    transition: background 0.3s;
+    display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 24px !important;
-    transition: background-color 0.3s;
 }
 
-.owl-nav button.owl-prev:hover,
-.owl-nav button.owl-next:hover {
-    background-color: #00c5ae !important;
+.owl-nav button:hover {
+    background-color: #00c853 !important;
 }
 
-.owl-dots {
-    display: none;
-}
-
-.carousel-item.second-slide .overlay-box {
-    margin-left: 15%;
-}
-
-@media screen and (max-width: 1200px) {
-    .overlay-box {
-        max-width: 500px;
-        padding: 35px;
+@media (max-width: 768px) {
+    .hero-carousel {
+        height: 80vh;
+        min-height: 450px;
     }
     
-    .overlay-box h1 {
-        font-size: 36px;
-    }
-    
-    .thumbnail-container {
-        right: -90px;
-        width: 160px;
-        height: 100px;
-    }
-}
-
-@media screen and (max-width: 992px) {
     .overlay-box {
-        max-width: 450px;
+        max-width: 80%;
         padding: 30px;
-        margin-left: 8%;
     }
     
     .overlay-box h1 {
@@ -163,74 +142,60 @@
     }
     
     .overlay-box h2 {
-        font-size: 16px;
+        font-size: 18px;
     }
     
-    .thumbnail-container {
-        right: -80px;
-        top: 60px;
-        width: 140px;
-        height: 90px;
+    .text-content p {
+        font-size: 15px;
     }
     
-    .owl-nav {
-        left: 8%;
+    .secondary-image {
+        width: 180px;
+        height: 180px;
+        right: -60px;
+        bottom: -60px;
     }
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 576px) {
+    .hero-carousel {
+        height: auto;
+        min-height: 400px;
+    }
+    
     .overlay-box {
-        max-width: 380px;
+        max-width: 90%;
         padding: 25px;
-        margin-left: 5%;
     }
     
     .overlay-box h1 {
         font-size: 28px;
-        margin-bottom: 15px;
     }
     
-    .overlay-box p {
+    .overlay-box h2 {
+        font-size: 16px;
+    }
+    
+    .text-content p {
         font-size: 14px;
-        margin-bottom: 20px;
-    }
-    
-    .thumbnail-container {
-        right: -60px;
-        top: 50px;
-        width: 120px;
-        height: 80px;
     }
     
     .btn-contacto {
-        padding: 10px 25px;
+        padding: 12px 30px;
         font-size: 14px;
     }
     
-    .owl-nav {
-        left: 5%;
-        bottom: 20px;
-    }
-    
-    .owl-nav button.owl-prev,
-    .owl-nav button.owl-next {
-        width: 35px;
-        height: 35px;
+    .secondary-image {
+        width: 150px;
+        height: 150px;
+        right: -40px;
+        bottom: -40px;
     }
 }
 
-@media screen and (max-width: 576px) {
-    .hero-carousel, .carousel-item {
-        height: 100vh;
-    }
-    
+@media (max-width: 320px) {
     .overlay-box {
-        max-width: 85%;
-        padding: 20px;
-        margin-left: auto;
-        margin-right: auto;
-        left: 0;
-        right: 0;
+        padding: 20px 15px;
     }
     
     .overlay-box h1 {
@@ -239,45 +204,18 @@
     
     .overlay-box h2 {
         font-size: 14px;
-        margin-bottom: 8px;
     }
     
-    .overlay-box p {
-        font-size: 13px;
-        line-height: 1.5;
-    }
-    
-    .thumbnail-container {
-        display: none; /* Ocultar imagen en pantallas pequeñas */
-    }
-    
-    .btn-contacto {
-        padding: 8px 20px;
+    .text-content p {
         font-size: 13px;
     }
     
-    .owl-nav {
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: 15px;
-    }
-    
-    .carousel-item.second-slide .overlay-box {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-@media screen and (max-width: 375px) {
-    .overlay-box {
-        padding: 15px;
-    }
-    
-    .overlay-box h1 {
-        font-size: 22px;
-    }
-    
     .btn-contacto {
-        padding: 8px 15px;
+        padding: 10px 25px;
+        font-size: 13px;
+    }
+    
+    .secondary-image {
+        display: none;
     }
 }
