@@ -4,10 +4,18 @@
     box-sizing: border-box;
 }
 
+html, body {
+    overflow-x: hidden; /* Previene scroll horizontal en toda la página */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 #proyectos-destacados {
     font-family: 'Poppins', sans-serif;
     background-color: rgb(232,228,228);
     position: relative;
+    width: 100%;
 }
 
 .titulo-proyectos-section {
@@ -204,13 +212,69 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
+    #proyectos-destacados {
+        width: 100vw;
+        max-width: 100%;
+        overflow: hidden;
+    }
+    
+    .titulo-proyectos-section {
+        padding: 60px 0 10px;
+        overflow: hidden;
+    }
+    
     .titulo-proyectos-outline {
-        font-size: 80px;
+        font-size: 60px !important;
+        white-space: normal !important;
+        width: 100%;
+        overflow: hidden;
     }
     
     .titulo-proyectos-main {
-        font-size: 32px;
+        font-size: 35px !important;
+        width: 100%;
+        padding: 0 15px ;
+    }
+    
+    .container-proyectos {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        overflow: hidden;
+    }
+    
+    #destacados-carousel {
+        width: 100%;
+    }
+    
+    .destacado-item {
+        width: 100%;
+        margin: 10px 0;
+    }
+    
+    .custom-nav-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+    
+    .prev-btn {
+        left: 5px;
+    }
+    
+    .next-btn {
+        right: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo-proyectos-outline {
+        font-size: 90px !important;
+    }
+    
+    .titulo-proyectos-main {
+        font-size: 30px !important;
     }
     
     .titulo-proyectos-accent {
@@ -220,5 +284,57 @@
     
     .destacado-img {
         height: 180px;
+    }
+    
+    .destacado-info {
+        padding: 15px;
+    }
+    
+    .destacado-info h3 {
+        height: auto;
+        min-height: 40px;
+    }
+    
+    .destacado-info p {
+        height: auto;
+        min-height: 60px;
+    }
+    
+    .owl-carousel .owl-stage-outer {
+        overflow: hidden;
+        width: 100%;
+    }
+}
+
+@media (max-width: 375px) {
+    .titulo-proyectos-outline {
+        font-size: 50px !important;
+    }
+    
+    .titulo-proyectos-main {
+        font-size: 29px !important;
+    }
+}
+
+@media (max-width: 320px) {
+    .titulo-proyectos-outline {
+        font-size: 40px;
+    }
+    
+    .titulo-proyectos-main {
+        font-size: 22px;
+    }
+    
+    .destacado-info h3 {
+        font-size: 14px;
+    }
+    
+    .destacado-info p {
+        font-size: 13px;
+    }
+    
+    .ver-mas-btn {
+        padding: 6px 12px;
+        font-size: 12px;
     }
 }
