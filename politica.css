@@ -195,7 +195,39 @@
     margin-left: -4px;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1024px) {
+    .politica-integrada h2 {
+        font-size: 42px;
+    }
+    
+    .politica-integrada p,
+    .politica-integrada ul li {
+        font-size: 22px;
+    }
+    
+    .politica-integrada ul li::before {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 768px) {
+    .politica-integrada {
+        padding: 40px 25px;
+    }
+    
+    .politica-integrada h2 {
+        font-size: 36px;
+    }
+    
+    .politica-integrada p,
+    .politica-integrada ul li {
+        font-size: 18px;
+    }
+    
+    .politica-integrada ul li::before {
+        font-size: 18px;
+    }
+    
     .certificaciones-carousel-container {
         width: 90%;
         max-width: 500px;
@@ -217,18 +249,49 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
+    .politica-integrada {
+        padding: 30px 20px;
+    }
+    
     .politica-integrada h2 {
-        font-size: 40px;
+        font-size: 28px;
     }
     
     .politica-integrada p,
     .politica-integrada ul li {
-        font-size: 20px;
+        font-size: 16px;
+    }
+    
+    .politica-integrada ul li::before {
+        font-size: 16px;
     }
     
     .certificacion-item p {
         font-size: 18px;
+    }
+}
+
+@media (max-width: 375px) {
+    .politica-integrada {
+        padding: 25px 15px;
+    }
+    
+    .politica-integrada h2 {
+        font-size: 24px;
+    }
+    
+    .politica-integrada p,
+    .politica-integrada ul li {
+        font-size: 15px;
+    }
+    
+    .politica-integrada ul li::before {
+        font-size: 15px;
+    }
+    
+    .certificacion-item p {
+        font-size: 16px;
     }
     
     .certificacion-item img {
@@ -251,9 +314,5 @@
     #certificaciones-carousel .owl-nav button.owl-next,
     .custom-next {
         right: -15px;
-    }
-    
-    .politica-integrada {
-        padding: 30px 20px;
     }
 }
