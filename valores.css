@@ -186,7 +186,35 @@
     }
 }
 
+@media screen and (max-width: 576px) {
+    .titulo-section {
+        padding: 60px 0 10px;
+        overflow: hidden;
+    }
+    
+    .titulo-outline {
+        font-size: 70px;
+        white-space: normal !important;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .titulo-main {
+        font-size: 30px;
+        width: 100%;
+        padding: 0 10px;
+    }
+}
+
 @media screen and (max-width: 480px) {
+    .titulo-outline {
+        font-size: 60px;
+    }
+    
+    .titulo-main {
+        font-size: 28px;
+    }
+    
     .valor-item {
         width: 100%;
         margin-bottom: 40px;
@@ -227,3 +255,22 @@
     }
 }
 
+@media screen and (max-width: 375px) {
+    .titulo-outline {
+        font-size: 50px;
+    }
+    
+    .titulo-main {
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .titulo-outline {
+        font-size: 45px;
+    }
+    
+    .titulo-main {
+        font-size: 24px;
+    }
+}
