@@ -9,12 +9,16 @@ $(document).ready(function(){
         autoplayHoverPause: true,
         responsive: {
             0: {
+                items: 1,
+                margin: 0
+            },
+            576: {
                 items: 1
             },
-            600: {
+            768: {
                 items: 2
             },
-            900: {
+            992: {
                 items: 3
             }
         }
